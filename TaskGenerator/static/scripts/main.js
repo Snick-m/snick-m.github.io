@@ -7,9 +7,11 @@ Verb Activity      Subject
 
 */
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    // true for mobile device
-    $("#taskCard").innerHTML = "📱 Shake 📱";
+window.onload = () => {
+    if (window.innerWidth < 992) {
+        // true for mobile device
+        document.getElementById("task").innerHTML = "📱 Shake 📱";
+    }
 }
 
 const shakeEvent = new Shake({ threshold: 15 });
@@ -18,7 +20,7 @@ shakeEvent.start();
 
 window.addEventListener('shake', shaked, false);
 
-window.onkeypress = function(ev) {
+window.onkeypress = function (ev) {
     if (ev.code == "Space") {
         shaked();
     }
