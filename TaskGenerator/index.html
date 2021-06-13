@@ -20,6 +20,8 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet" />
+  <!-- jQuery UI Theme-->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
 </head>
 
 <body class="d-flex align-items-center justify-content-center">
@@ -27,19 +29,26 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://chrome.com">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-  <div class="card">
+  <div class="card" id="taskCard">
     <div class="d-flex flex-column align-items-center justify-content-center card-body">
       <p class="flex-row card-text">
-        <span id="vrb">a</span>
-        <span id="sub">b</span>
-        <span id="ext">c</span>
+        <!--
+          <span id="vrb">a</span>
+          <span id="sub">b</span>
+          <span id="ext">c</span>
+        -->
+        <span id="task">📱 Shake 📱</span>
       </p>
-      <button type="button" class="d-none d-md-block btn btn-primary">Button</button>
+      <button type="button" onclick="shaked" class="d-none d-md-block btn btn-primary">Generate</button>
     </div>
   </div>
 
   <!-- Shake.js -->
   <script type="text/javascript" src="./static/scripts/shake.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
 
   <script src="./static/scripts/dictionary.js"></script>
   <script src="./static/scripts/main.js"></script>

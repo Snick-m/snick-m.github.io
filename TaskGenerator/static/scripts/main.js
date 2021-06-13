@@ -6,28 +6,29 @@ ____ ________ ---- ________
 Verb Activity      Subject
 
 */
-window.onload = function () {
-    const shakeEvent = new Shake({ threshold: 15 });
+const shakeEvent = new Shake({ threshold: 15 });
 
-    shakeEvent.start();
+shakeEvent.start();
 
-    window.addEventListener('shake', shaked, false);
+window.addEventListener('shake', shaked, false);
 
-    function shaked() {
-        alert(generate());
-    }
+function shaked() {
+    document.getElementById('task').innerHTML = generate();
+    
+    $("#taskCard").effect("shake", { direction: "right", times: 3, distance: 10 });
+    // alert(generate());
+}
 
-    function generate() {
-        let cat = Math.round(Math.random() * 4);
+function generate() {
+    let cat = Math.round(Math.random() * 4);
 
-        let verb = verbs[cat];
-        let subject = subjects[cat];
-        let extension = extensions[cat];
+    let verb = verbs[cat];
+    let subject = subjects[cat];
+    let extension = extensions[cat];
 
-        return (verb.pickRandom(), subject.pickRandom(), extension.pickRandom());
-    }
+    return verb.pickRandom().concat(' ', subject.pickRandom(), ' ', extension.pickRandom(), '.');
+}
 
-    Array.prototype.pickRandom = function () {
-        return this[Math.floor(Math.random() * this.length)];
-    }
+Array.prototype.pickRandom = function () {
+    return this[Math.floor(Math.random() * this.length)];
 }
