@@ -13,12 +13,8 @@ window.onload = function () {
 
     window.addEventListener('shake', shaked, false);
 
-    if (window.DeviceMotionEvent) {
-        alert("Feature Found!");
-    }
-
     function shaked() {
-        alert("Hi!");
+        alert(generate());
     }
 
     function generate() {
