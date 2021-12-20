@@ -12,6 +12,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./stylesheet.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYQEGKXT0C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EYQEGKXT0C');
+    </script>
 </head>
 
 <body>
@@ -37,7 +47,7 @@
                 return response.json();
             })
             .then(data => {
-                let quoteElement = document.getElementById("quote"); 
+                let quoteElement = document.getElementById("quote");
                 quoteElement.innerHTML = quoteElement.innerHTML.replace("Text", data.content);
 
                 let authorElement = document.querySelector("#author > span");
