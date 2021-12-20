@@ -9,15 +9,10 @@ body {
     font-family: 'Caveat', cursive;
     color: #fff;
 
-    background: black;
     overflow: hidden;
     background: url("https://picsum.photos/1280/720");
     background-size: cover;
     background-position: center;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 p {
