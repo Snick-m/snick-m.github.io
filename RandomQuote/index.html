@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote | Mushfiqur Rahman</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./stylesheet.css">
+</head>
+
+<body>
+    <p id="overlay"></p>
+    <div>
+        <section id="quote">
+            Text
+            <section id="author">
+                <span>- Mushfiqur Rahman</span>
+            </section>
+        </section>
+    </div>
+
+    <script>
+        fetch("https://quotes15.p.rapidapi.com/quotes/random/", {
+            "method": "GET",
+            "headers": {
+                "x-rapidapi-key": "35bb9003e3msh50115904a727754p1cddbfjsn02e5d00c3561",
+                "x-rapidapi-host": "quotes15.p.rapidapi.com"
+            }
+        })
+            .then(response => {
+                return response.json();
+            })
+            .then(data => {
+                let quoteElement = document.getElementById("quote"); 
+                quoteElement.innerHTML = quoteElement.innerHTML.replace("Text", data.content);
+
+                let authorElement = document.querySelector("#author > span");
+                authorElement.innerHTML = "- " + data.originator.name;
+
+                document.getElementById("overlay").style.opacity = 0;
+            })
+            .catch(err => {
+                console.error(err);
+            });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Caveat', cursive;
+    color: #fff;
+
+    background: black;
+    overflow: hidden;
+    background: url("https://picsum.photos/1280/720");
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    background-color: #111;
+    z-index: 10;
+
+    transition: all 0.7s;
+}
+
+div {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    font-size: 50px;
+}
+
+#quote {
+    max-width: 50%;
+}
+
+#author {
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    margin-top: 20px;
+    text-align: end;
+}
