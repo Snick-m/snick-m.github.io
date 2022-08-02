@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title>Dgital Education | NCTB</title>
+
+        <style>
+            * {
+                margin : 0px;
+                padding: 0px;
+            }
+
+            body {
+                background-color: #6C6C6C;
+            }
+
+            .header {
+                position: absolute;
+                width : 100%;
+                height: 100px;
+                background-color: #F0300B;
+            }
+
+            #heading {
+                font-family: Arial , Helvetica, sans-serif;
+                font-size: 30px;
+                text-align: center;
+                color: #FFFFFF;
+                margin: 30px 0px 0px 0px;
+            }
+
+            #slogan {
+                position: absolute;
+                font-size: 12px;
+                font-style: italic;
+                margin: 30px 0px 0px -50px;
+            }
+
+            .gallery {
+                position: absolute;
+                margin: 15% 0px 0px 24%;
+            }
+
+            .gallery tr td {
+                border-spacing: 80px;
+                border: solid 5px black;
+                border-collapse: collapse;
+                margin-left: 20px;
+            }
+
+            img {
+                height: 200px;
+            }
+
+#navMenu {position: absolute; margin:100px 0px 0px 0px; z-index: 20; width: 100%;}
+#navMenu ul{margin:0;padding:0;list-style:none;background:#252525;text-align:center;position:relative;}
+
+#navMenu ul li{display:inline-block;}
+
+#navMenu ul li a{display:block;height:45px;width:150px;color:#fff;font-family:helvetica;line-height:43px;text-decoration:none;transition: background 0.5s linear 0s, color 0.5s linear 0s}
+
+#navMenu ul li a:hover{background:#f0300b;color:#781705;}
+
+#navMenu ul ul{position:absolute;width:150px;display:none;}
+#navMenu ul ul li{display:block;background:#252525;}
+
+#navMenu ul li img{vertical-align:middle;padding-left:15px;border:none;}
+
+            video {
+                position: absolute;
+                margin: 10% 0px 0px 30%;
+            }
+
+            .video_heading {
+                position: absolute;
+                margin: 150px 0px 0px;
+                font-size: 50px;
+                font-family: lucida console;
+                text-align: center;
+                width: 100%;
+                color: #FFF;
+            }
+
+
+        </style>
+<script src="jquery-1.12.0.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+	            $("#navMenu ul li").click(function() {
+		            $(this).find("ul").slideToggle(400);
+	            });
+            });
+        </script>
+
+
+
+    </head>
+
+    <body>
+
+        <div class="header">
+            <div id="heading"><strong>Digital Education</strong> <span id="slogan">For a better, Digital Bangladesh</span></div>
+        </div>
+
+	   <div id="navMenu">
+		<ul>
+		     <li ><a href="index.html">Home</a></li>
+
+
+			<li><a href="#">Class </a>
+				<ul>
+					<li><a href="#">Class 1</a></li>
+					<li><a href="#">Class 2</a></li>
+					<li><a href="#">Class 3</a></li>
+					<li><a href="#">Class 4</a></li>
+					<li><a href="#">Class 5</a></li>
+					<li><a href="#">Class 6</a></li>
+					<li><a href="#">Class 7</a></li>
+					<li><a href="#">Class 8</a></li>
+					<li><a href="class_9.html">Class 9-10</a></li>
+				</ul>
+			</li>
+			<li style="background-color:  #f0300b; color: #781705;"><a href="#">Videos</a>
+				<ul>
+					<li><a href="#">Class 1</a></li>
+					<li><a href="#">Class 2</a></li>
+					<li><a href="#">Class 3</a></li>
+					<li><a href="#">Class 4</a></li>
+					<li><a href="#">Class 5</a></li>
+					<li><a href="#">Class 6</a></li>
+					<li><a href="#">Class 7</a></li>
+					<li><a href="#">Class 8</a></li>
+					<li><a href="videos_9.html">Class 9-10</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Notices </a>
+				<ul>
+					<li><a href="#">Dropdown</a></li>
+					<li><a href="#">Dropdown</a></li>
+					<li><a href="#">Dropdown</a></li>
+					<li><a href="#">Dropdown</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+    <div class="video_heading">Math</div>
+    <video width="720" height="480" controls>
+        <source src="videos/class_9/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+    </video>
+
+    </body>
+
+</html>

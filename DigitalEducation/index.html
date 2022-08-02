@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+        <title>Dgital Education | NCTB</title>
+
+        <style>
+            * {
+                margin : 0px;
+                padding: 0px;
+                font-family: Arial , Helvetica, sans-serif;
+            }
+
+            body {
+                background-color: #6C6C6C;
+            }
+
+            .header {
+                position: absolute;
+                width : 100%;
+                height: 100px;
+                background-color: #f0300b;
+            }
+
+            #heading {
+                font-family: Arial , Helvetica, sans-serif;
+                font-size: 30px;
+                text-align: center;
+                color: #FFFFFF;
+                margin: 30px 0px 0px 0px;
+            }
+
+            #slogan {
+                position: absolute;
+                font-size: 12px;
+                font-style: italic;
+                margin: 30px 0px 0px -50px;
+            }
+
+
+#navMenu {position: absolute; margin:100px 0px 0px 0px; z-index: 20; width: 100%;}
+#navMenu ul{margin:0;padding:0;list-style:none;background:#252525;text-align:center;position:relative;}
+
+#navMenu ul li{display:inline-block;}
+
+#navMenu ul li a{display:block;height:45px;width:150px;color:#fff;font-family:helvetica;line-height:43px;text-decoration:none;transition: background 0.5s linear 0s, color 0.5s linear 0s}
+
+#navMenu ul li a:hover{background:#f0300b;color:#781705;}
+
+#navMenu ul ul{position:absolute;width:150px;display:none;}
+#navMenu ul ul li{display:block;background:#252525;}
+
+#navMenu ul li img{vertical-align:middle;padding-left:15px;border:none;}
+
+            .footer {
+		    position: absolute;
+		    background-color: #f0300b;
+		    height: 3.5%;
+		    width: 100%;
+		    margin: 60% 0px 0px 0px;
+		}
+
+		#power {
+		    color: #fff;
+		    font-size: 20px;
+		    margin: 0px 0px 0px 10px;
+		}
+
+		#me {
+		    background-color: #FFF;
+		    font-size: 21px;
+		    padding-right: 3px;
+		    padding-left: 3px;
+		    padding-bottom: 1px;
+		    color: #000;
+		}
+
+		#me:hover {
+		    background-color: #000;
+		    color: #FFF;
+		}
+
+        .overlay {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            font-family: Helvetica;
+            font-size: 70px;
+            color: #F0030B;
+            z-index: 100;
+            background-color: #6C6C6C;
+        }
+
+        .welcome_msg {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            top: -100px;
+        }
+
+        </style>
+
+        <script src="jquery-1.12.0.min.js"></script>
+
+
+        <script>
+            $(document).ready(function(){
+                $('.overlay')
+                    .find('.welcome_msg').delay(1000)
+                    .animate({
+                        top: 400,
+                    }, '500');
+                $('.overlay').delay(3000)
+                .animate({
+                    width: 0,
+                }, '500');
+                setTimeout(function() {
+                    $('.welcome_msg').fadeOut(250);
+                }, 3000);
+            });
+        </script>
+
+        <script>
+            $(document).ready(function() {
+	            $("#navMenu ul li").click(function() {
+		            $(this).find("ul").slideToggle(400);
+	            });
+            });
+        </script>
+
+
+
+    </head>
+
+    <body>
+	   
+	   <div class="overlay">
+	       <div class="welcome_msg">The beginning of Digital Education...</div>
+	   </div> 
+        <div class="header">
+            <div id="heading"><strong>Digital Education</strong> <span id="slogan">For a better, Digital Bangladesh</span></div>
+        </div>
+
+        <div id="navMenu">
+		<ul>
+		     <li style="background-color:  #f0300b; color: #781705;"><a href="#">Home</a></li>
+
+
+			<li><a href="#">Class <img src="arrow.png" alt="" /></a>
+				<ul>
+					<li><a href="#">Class 1</a></li>
+					<li><a href="#">Class 2</a></li>
+					<li><a href="#">Class 3</a></li>
+					<li><a href="#">Class 4</a></li>
+					<li><a href="#">Class 5</a></li>
+					<li><a href="#">Class 6</a></li>
+					<li><a href="#">Class 7</a></li>
+					<li><a href="#">Class 8</a></li>
+					<li><a href="class_9.html">Class 9-10</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Videos <img src="arrow.png" alt="" /></a>
+				<ul>
+					<li><a href="#">Class 1</a></li>
+					<li><a href="#">Class 2</a></li>
+					<li><a href="#">Class 3</a></li>
+					<li><a href="#">Class 4</a></li>
+					<li><a href="#">Class 5</a></li>
+					<li><a href="#">Class 6</a></li>
+					<li><a href="#">Class 7</a></li>
+					<li><a href="#">Class 8</a></li>
+					<li><a href="videos_9.html">Class 9-10</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Notices <img src="arrow.png" alt="" /></a>
+				<ul>
+					<li><a href="#">Dropdown</a></li>
+					<li><a href="#">Dropdown</a></li>
+					<li><a href="#">Dropdown</a></li>
+					<li><a href="#">Dropdown</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+    <div class="main">
+        <div id="main_heading" style="position: absolute; margin:300px 0px 0px 10%; font-size: 60px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: red;">
+            Welcome To A new era of Digitalization
+        </div>
+        <div id="main_content" style="position: absolute; font-size: 20px; color: yellow; margin: 35% 0px 0px 16%; width:70%; text-align: center; ">
+            Finally the long awaited digitalization of Education is at our hand  with the easiest possible technology that will bring a great change upon our loving country, Bangladesh.
+            IT is one of the most important division required for a country to prosper. And the government has been continuosly making progress in the IT division. And one of the biggest target of our country is the
+            " Vision '21 " The government has set a target to digitalize Bangladesh by 2021. Therefore, we bring the easiest method of digitalizing our education system. This method will not only help our country
+             to become digitalized but it will also save a lot of money and effort along with those this method will decrease the use of paper at an outstanding percentage! Thus our ecological status will become
+             better and our nature pollution will be decreased.
+        </div>
+    </div>
+
+    <div class="footer">
+        <div id="power">Idea And Design By <span id="me" >Mushfiqur & Anisur</span> .</div>
+    </div>
+
+
+    </body>
+
+</html>

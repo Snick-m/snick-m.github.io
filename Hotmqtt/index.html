@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Oxanium:700|Bree+Serif&display=swap" rel="stylesheet">
+        <style type="text/css">
+            * {
+                margin: 0;
+                color: #1C1C1C;
+                font-family: 'Bree Serif', monospace;
+                color: white;
+            }
+
+            .container {
+                display: flex;
+                flex-direction: row;
+                justify-content: stretch;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .enter {
+                position: absolute;
+                justify-content: flex-start !important;
+            }
+
+            .enter h1 {
+                flex-grow: 0 !important;
+            }
+
+            .enter input, .enter label {
+                width: 30%;
+            }
+
+            .enter label {
+                margin-top: 20px;
+            }
+            
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 7.5%;
+                height: 40%;
+                width: 100%;
+            }
+
+            .pub, .sub, .enter{
+                display: flex;
+                flex-direction: column;
+                justify-content: stretch;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                flex-grow: 1;
+            }
+
+            .pub {
+                background-color: darkorange;
+                border-right: black 2px solid;
+            }
+
+            .sub {
+                background-color: dodgerblue;
+                border-left: black 2px solid;
+            }
+
+            .pub > *, .sub > * {
+                flex-grow: 1;
+            }
+
+            .pub > div, .sub > div {
+                flex-grow: 24 !important;
+            }
+
+            h1 {
+                width: 100%;
+                text-align: center;
+                font-size: 10vh;
+                align-self: flex-start;
+                flex-grow: 16 !important;
+                font-family: 'Oxanium', sans-serif;
+                box-sizing: border-box;
+                filter: drop-shadow(0px 0px 4px black);
+                padding-top: 40px;
+            }
+
+            input, label {
+                width: 70%;
+                font-size: 4vh;
+            }
+
+            input {
+                color: #FFF;
+                background-color: #1F1F1F;
+                font-size: 3vh;
+                padding: 5px 20px;
+                border-radius: 10px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+
+            .alert {
+                position: fixed;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-content: stretch;
+                right: 50px;
+                font-size: 2vh;
+                width: 500px;
+                background-color: #eee;
+                box-sizing: border-box;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .alert .tag {
+                background-color: darkgreen;
+                width: 15px;
+            }
+
+            .alert .message {
+                padding: 15px 10px;
+            }
+
+            .alert .close {
+                display: flex;
+                width: 50px;
+                font-size: 20px;
+                color: #2C2C2C !important;
+                margin-left: auto;
+                justify-content: center;
+                align-items: center;
+            }
+
+            @media only screen and (max-width: 1024px) and (orientation: portrait) {
+                .container {
+                    flex-direction: column;
+                }
+
+                .enter input, .enter label {
+                    width: 70%;
+                }
+
+                .pub {
+                    border-right: none;
+                    border-bottom: 2px solid black;
+                }
+
+                .sub {
+                    border-left: none;
+                    border-top: 2px solid black;
+                }
+
+                .alert {
+                    font-size: 3.2vw;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container" id="login">
+            <div class="enter">
+                <h1>MQTT Web Client</h1>
+                <form>
+                    <label for="host">Host</label>
+                    <input type="text" class="host" name="Host" placeholder="Full URL. wss:// for SSL, ws:// for non-SSL">
+                    <label for="port">Port</label>
+                    <input type="text" class="port" name="Port" placeholder="Port Number for websocket listener">
+                    <label for="user">Username</label>
+                    <input type="text" class="user" name="User" placeholder="Hit Enter to Continue">
+                    <label for="pass">Password</label>
+                    <input type="password" class="pass" name="Pass" placeholder="Hit Enter to Continue">
+                </form>
+            </div>
+            <div class="pub"></div>
+            <div class="sub"></div>
+        </div>
+        <div class="container" id="interface" style="display: none;">
+
+            <div class="pub" id="pub">
+                <h1>Publish</h1>
+                <label for="topic">Topic</label>
+                <input type="text" class="topic" name="Topic" placeholder="Hit Enter to Continue">
+                <span></span>
+                <div></div>
+            </div>
+
+            <div class="sub" id="sub">
+                <h1>Subscribe</h1>
+                <label for="topic message">Topic</label>
+                <input type="text" class="topic message" name="Topic" placeholder="Hit Enter to Continue">
+                <span></span>
+                <div></div>
+            </div>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+
+
+
+        <span class="alert" id="alertTemplate" style="display: none;">
+            <div class="tag"></div>
+            <div class="message"></div>
+            <div class="close">&CircleTimes;</div>
+        </span>
+    </body>
+</html>
