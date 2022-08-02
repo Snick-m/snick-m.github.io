@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FilterWatch | The Last Library You'll Need</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <link rel="stylesheet" href="dependencies/style.css" type="text/css">
+    <link rel=�shortcut icon� type=�image/x-icon� href="/favicon.ico">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125057517-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-125057517-1');
+    </script>
+    <script language="JavaScript">
+        var data = '&r=' + escape(document.referrer)
+            + '&n=' + escape(navigator.userAgent)
+            + '&p=' + escape(navigator.userAgent)
+            + '&g=' + escape(document.location.href);
+
+        if (navigator.userAgent.substring(0, 1) > '3')
+            data = data + '&sd=' + screen.colorDepth + '&sw=' + escape(screen.width + 'x' + screen.height);
+    </script>
+    </head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+
+        <h2 class="sideHeader">Select categories</h2>
+
+        <p class="sideText">Check the boxes to get videos based on selected topics.</p>
+
+        <div class="radioContainer">
+            <label class="list">
+                <input type="radio" id="science" oninput="filter()" name="radio">
+                <span class="checkmark"></span>
+                <p>Science</p>
+            </label>
+
+            <label class="list">
+                <input type="radio" id="technology" oninput="filter()" name="radio">
+                <span class="checkmark"></span>
+                <p>Technology</p>
+            </label>
+
+            <label class="list">
+                <input type="radio" id="history" oninput="filter()" name="radio">
+                <span class="checkmark"></span>
+                <p>History</p>
+            </label>
+
+            <label class="list">
+                <input type="radio" id="health" oninput="filter()" name="radio">
+                <span class="checkmark"></span>
+                <p>Health & Fitness</p>
+            </label>
+        </div>
+
+
+    </div>
+
+    <div id="main" style="margin-left: 0px;">
+        <span id="menuBar" style="font-size:30px;cursor:pointer">
+            <div id="sidenavToggler" class="container1" onclick="toggleNav()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </span>
+    </div>
+
+    <div class="container">
+        <header class="new-header">
+            <center>
+                <img src="dependencies/FilterWatch.png" alt="" srcset="">
+            </center>
+        </header>
+        <div class="header">
+            <center>
+                <h1>FilterWatch</h1>
+                <h1 style="font-size: 2.4rem; color: #ff1f1f">Turn Procrastination into Productivity
+                </h2>
+            </center>
+            <center>
+                <p class="lead"><a class="btn" href="#" onclick="refreshVideo()">Click here</a> to get a <br><strong>Random
+                        Educational Video
+                    </strong><br>you can watch right now!</p>
+            </center>
+        </div>
+
+        <main class="main_content">
+            <div class="video-box">
+                <iframe id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="features_Description">
+                <div class="proc_out">
+                    <p>Instead of wasting your precious time on random YouTube videos which are useless to you, try our app here which filters YouTube, takes out all the unnecessary videos and sticks to random educational videos for you to watch.</p>
+                    <img style="background-color: #ffffff;" src="https://drive.google.com/uc?export=view&id=1fMlrHuXg6TaaGVw7c0R63cwpydE2kvTE">
+                </div>
+                <div class="proc_out">
+                    <img src="https://drive.google.com/uc?export=view&id=1ul0nat3r-1xLkU8wYuKjNYpbybvwMrIT">
+                    <p>Learn on the go without all the distracting videos. Filter videos by your category of choice and start learning because knowledge has no limits and learning has no fixed time.</p>
+                </div>
+                <div class="proc_out">
+                    <p>Just press the "Click here" button to change the video if you don't like it or want to see a new one. You can choose from different categories in the menu as well which is located on the upper left side of the page.</p>
+                    <img src="https://drive.google.com/uc?export=view&id=1y2d1nG21FFDca0qPbQgtm3-BWGuRDXgY">
+                </div>
+            </div>
+        </main>
+        </div>
+        
+    
+
+    <footer>
+        <center>
+            Created by and all rights reserved by <span id="name"><a href="https://www.facebook.com/profile.php?id=100009088998964" target="_blank"> Asif Khan</a> </span> and <span id="name"><a href="https://www.facebook.com/snick.101010" >Mushfiqur Rahman</a></span> 
+        </center>
+    </footer>
+
+    <script type="text/javascript" src="dependencies/script.js"></script>
+</body>
+
+</html>

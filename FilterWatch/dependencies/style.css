@@ -1,0 +1,554 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Lato', serif;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+    background-image: url('https://drive.google.com/uc?export=view&id=1Dbh4Mn6VuIyxC-ALkjLDw9IHm7ok5pxy');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: #111111;
+    transition: background-color .5s;
+}
+.header {
+    width: 100%;
+    border: 20px solid rgba(30, 30, 30, 1);
+    background-color:  rgba(255,255,255,1);
+    border-radius: 70px;
+    display: none;
+}
+
+.new-header{
+    width: 100%;
+    height: 15rem;
+    background: rgba(255,255,255,1);
+    border-radius: 2rem;
+}
+
+.new-header center{
+    height: 15rem;
+}
+
+.new-header img{
+    height: 100%;
+    margin: 0 0 0 5rem;
+}
+
+h1 {
+    font-size: 5.2rem;
+    color: #1f1f1f;
+    border-radius: 49px 49px 0 0;
+    padding-bottom: 2rem;
+}
+
+.lead {
+    font-size: 1.8rem;
+    padding: 1rem 4rem;
+    background-color: rgba(30, 30, 30, 1);
+}
+
+strong {
+    font-size: 2.7rem;
+    color: rgb(0, 175, 175);
+}
+
+
+
+/* responsive iframe */
+
+.video-box {
+    position: relative;
+    padding-bottom: 40%;
+    padding-top: 0px;
+    height: 0;
+}
+
+iframe {
+    position: absolute;
+    top: 5rem;
+    left: 15%;
+    width: 70%;
+    height: 100%;
+    background-image: url('https://drive.google.com/uc?export=view&id=1rjAKPR6IOXw6H9zKHNHpFuG7Tc8cH0ZI');
+    background-position: 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 30px;
+    /* border: 3rem solid #1f1f1f; */
+    border-radius: 2rem;
+    display: block;
+}
+
+.features_Description {
+    width: 100%;
+    height: 100%;
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proc_out {
+    font-family: 'Titillium Web', sans-serif;
+    display: block;
+    width: 65%;
+    background-color: white;
+    margin: 1rem 0 1rem 0;
+    padding: 2rem 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.proc_out img {
+    width:50%;
+    display: block;
+    /* height: 30rem; */
+    background-color: #ffffff;
+}
+
+.proc_out p {
+  font-size: 2.2rem;
+  font-weight: 100;
+  display: block;
+  text-align: justify;
+  text-justify: inter-word;
+  border-radius: 5px;
+  padding: 4.75rem;
+}
+
+.btn {
+    display: inline-block;
+    font-size: 2.6rem;
+    text-decoration: none;
+    color: #ff2f2f;
+    font-weight: 900;
+    margin-right: .5rem;
+    transition: all .2s;
+    backface-visibility: hidden;
+}
+
+.btn:hover {
+    color: #ff1c1c;
+    transform: scale(1.02);
+}
+
+/* ======================
+   ========TOGGLEABLE SIDEBAR=====
+   ================================= */
+
+.sidenav {
+    height: 100%;
+    width: 30rem;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -30rem;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6rem;
+    color: #f1f1f1;   
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: .5rem;
+    display: inline-block;
+    height: 5rem;
+    width: 5rem;
+    background-color: #f1f1f1;
+    border-radius: 100px;
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 100;
+}
+
+.container1 {
+    margin-left: .5rem;
+    margin-top: 1rem;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 3rem;
+    height: 3px;
+    background-color: #1a1a1a;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-7px, -6px);
+}
+
+.sideHeader {
+    font-size: 3rem;
+    padding: 1rem 1rem .3rem 1rem;
+    margin-bottom: .5rem;
+    margin-top: -3rem;
+    text-align: center;  
+}
+
+.sideText {
+    margin-bottom: 11rem;
+    background-color: #111111;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.description {
+    line-height: 1.7;
+    font-weight: bold;
+    font-size: 2.1rem;
+}
+
+/* Checkbox==========
+  ======================
+  =========== */
+
+/* Customize the label (the list) */
+
+.list {
+    display: block;
+    position: relative;
+    padding-left: 3.5rem;
+    margin-bottom: 8rem;
+    cursor: pointer;
+    font-size: 2.2rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+
+.list input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 22rem;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+
+.list:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.list input:checked~.checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.list input:checked~.checkmark::after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.list .checkmark::after {
+    left: 7px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 2.4rem;
+    letter-spacing: 0.25rem;
+    font-family: 'Consolas', sans-serif;
+    height: 20rem;
+    margin: 3rem 0 0;
+    /* background-color: rgba(20, 20, 20, 0.75); */
+    background-color: white;
+}
+
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+
+#name{
+    color: #fff;
+    padding: 5px;
+    font-weight: 900;
+    transition: transform .2s;
+    display: inline-block;
+    background-color: #111;
+}
+
+#name:hover{
+    transform: scale(1.1);
+    cursor: default;
+    text-decoration: underline;
+}
+
+/* Checkbox==========
+  ======================
+  =========== */
+
+/* ======================
+   ========TOGGLEABLE SIDEBAR=====
+   =============ENDDDDDDD============== */
+
+   /* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.blank{
+    height: 20rem;
+    visibility: hidden;
+}
+
+@media screen and (max-width:700px) {
+    #main{
+        height: 3rem;
+        width: 3rem;
+    }
+    .sidenav {
+        width: 25rem;
+        left: -25rem;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 1.7rem;
+        height: 2px;
+        background-color: #1a1a1a;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+    .container1 {
+        margin-left: 0.1rem;
+        margin-top: 0.56rem;
+    }
+
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-7px, 6px);
+        transform: rotate(-45deg) translate(-2px, 4px);
+    }
+
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-3px, -5px);
+    }
+    h1, .sideHeader {
+        font-size: 2.2rem;
+    }
+    
+    p {
+        font-size: 1.5rem;
+    }
+
+    .sideText {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .checkmark {
+        left: 20rem;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+
+    .header {
+        border-radius: 20px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    iframe {
+        position: relative;
+        height: 25rem;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        /* border-width: 20px; */
+        background-size: 100%;
+        padding: 15px;
+        min-width: 100%;
+        min-height: 100%;
+        left: 0;
+        
+    }
+
+    strong {
+        font-size: 1.8rem;
+    }
+
+    .video-box {
+        height: 25rem;
+    }
+
+    .btn:hover {
+        transform: none;
+    }
+
+    .checkmark {
+        width: 15px;
+        height: 15px;
+        top: 4px;
+    }
+
+    .list .checkmark::after {
+        left: 6px;
+        top: 2px;
+    }
+
+    .list .checkmark::after {
+        left: 4px;
+        top: 4px;
+        width: 8px;
+        height: 8px;
+    }
+    .proc_out{
+      flex-direction: column;
+      width: 90%;
+
+    }
+
+    .proc_out p{
+      font-size: 1.5rem;
+      padding: 3.5rem 0.5rem;
+    }
+
+    .proc_out img{
+      width: 98%;
+    }
+
+    footer {
+        height: 10rem;
+        font-size: 1rem;
+        padding: 8rem 9rem;
+    }
+
+    footer center {
+        padding: 5px;
+    }
+
+    #name{
+        padding: 3px;
+        display: block;
+        width: 10rem;
+    }
+
+    .new-header img{
+        width: 30rem;
+        height: auto;
+        margin: 30px 0px 0 -10px;
+    }
+}
+
+@media screen and (max-width:1100px){
+    .proc_out{
+        flex-direction: column;
+        padding: 3.75rem;
+    }
+    .proc_out p{
+        order: 2;
+    }
+
+    #name{
+        padding: 2px;
+        display: block;
+        width: 20rem;
+        margin: 5px;
+
+    }
+} 
+
+
+
+
+
