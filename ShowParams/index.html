@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Params from XSS</title>
+</head>
+<body>
+    <div id="info"></div>
+    <script defer>
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        var info = "";
+
+        for (const [key, value] of urlParams.entries()) {
+            info += key + ": " + value + '\n';
+        }
+
+        document.getElementById("info").innerHTML = info;
+    </script>
+</body>
+</html>
+
+<!-- document.addEventListener('DOMContentLoaded', () => {document.getElementById("ctl00_leftColumn_ctl00_btnLogin").addEventListener('click', () => {alert()})}) -->
