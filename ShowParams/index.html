@@ -8,7 +8,7 @@
     <title>Show Params from XSS</title>
 </head>
 
-<body>
+<body style="font-family: serif;">
     <div id="info"></div>
     <script defer>
         const queryString = window.location.search;
@@ -23,7 +23,7 @@
         document.getElementById("info").innerHTML = info;
     </script>
 
-    <div style="top:400px">Don't Worry. Nothing is being saved. Visit https://github.com/snick-m/snick-m.github.io to find the source of this project under ShowParams folder.</div>
+    <div style="position:absolute; bottom:100px; font-weight:bold; color: green">Don't Worry. Nothing is being saved. Visit <a href="https://github.com/snick-m/snick-m.github.io">Source Link</a> to find the source of this project under ShowParams folder.</div>
 
 </body>
 
