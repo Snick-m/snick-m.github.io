@@ -1,0 +1,41 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#tech_stack:hover>ul {
+    animation: scroll 8s ease infinite;
+}
+
+#tech_stack:hover {
+    transform: perspective(400px) rotateY(-30deg);
+}
+
+#tech_stack {
+    transition: transform 0.75s ease;
+}
+
+.list-item:hover::before {
+    content: "🪄";
+}
+
+.list-item:hover {
+    transform: skewX(-10deg);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        margin-top: 0%;
+    }
+
+    50% {
+        transform: translateY(-100%);
+        margin-top: 100%;
+    }
+
+    100% {
+        transform: translateY(0%);
+        margin-top: 0%;
+    }
+}

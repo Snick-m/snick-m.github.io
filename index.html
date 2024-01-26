@@ -2,7 +2,14 @@
 <html lang="en" data-theme="light">
 
 <head>
-    <title></title>
+    <title>Mushfiqur Rahman | Fullstack</title>
+    <meta name="title" content="Mushfiqur Rahman, Fullstack Developer">
+    <meta name="description" content="Mushfiqur Rahman is a Fullstack Developer with experience in JavaScript, Typescript, and Python as well as various frameworks such as Vue, and Express">
+    <meta name="keywords" content="mushfiqur rahman, web developer, fullstack, tmu, toronto metropolitan university, canada, toronto, bangladesh, dhaka, urc 2023, bracu mongol tori, toronto met robotics">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="language" content="English">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -11,58 +18,18 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
-
-        * {
-            font-family: 'Poppins', sans-serif;
-        }
-
-
-        #tech_stack:hover>ul {
-            animation: scroll 8s ease infinite;
-        }
-
-        #tech_stack:hover {
-            transform: perspective(400px) rotateY(-30deg);
-        }
-
-        #tech_stack {
-            transition: transform 0.75s ease;
-        }
-
-        .list-item:hover::before {
-            content: "🪄";
-        }
-
-        .list-item:hover {
-            transform: skewX(-10deg);
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateY(0);
-                margin-top: 0%;
-            }
-
-            50% {
-                transform: translateY(-100%);
-                margin-top: 100%;
-            }
-
-            100% {
-                transform: translateY(0%);
-                margin-top: 0%;
-            }
-        }
     </style>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 
-<body class="lg:px-80">
-    <div class="px-7 md:px-20 lg:scale-125 py-14 md:py-32">
-        <div class="flex justify-between">
-            <h1 id="name" class="hover:text-white hover:bg-black text-5xl md:text-8xl text-left">
+<body class="2xl:px-96">
+    <div class="px-7 md:px-24 lg:px-24 py-8 md:py-24 lg:py-32">
+        <div class="flex py-4 justify-between items-center">
+            <h1 id="name" class="hover:text-white hover:bg-black text-4xl md:text-6xl lg:text-8xl text-left">
                 ./mushfiqr
             </h1>
-            <div id="tech_stack" class="text-xs md:text-lg overflow-clip h-10 md:h-24 self-center">
+            <div id="tech_stack" class="text-xs md:text-base lg:text-lg h-16 scale-75 md:h-20 lg:h-24 overflow-clip self-center">
                 <ul class="text-right">
                     <li class="text-gray-500">Vue.js</li>
                     <li class="text-gray-500">Typescript</li>
@@ -79,9 +46,7 @@
                 </ul>
             </div>
         </div>
-        <div class="grid grid-cols-2 p-12">
-        </div>
-        <ul id="projects" class="text-xl md:text-2xl mx-6 md:mx-12">
+        <ul id="projects" class="mt-6 mx-6 lg:mx-12 text-sm md:text-lg lg:text-2xl">
             <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900" href="./TaskGenerator">
                     task_generator</a>
             </li>
