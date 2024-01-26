@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 
 <head>
     <title></title>
@@ -7,30 +7,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.20.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+
+        #tech_stack:hover>ul {
+            animation: scroll 8s ease infinite;
+        }
+
+        #tech_stack:hover {
+            transform: perspective(400px) rotateY(-30deg);
+        }
+
+        #tech_stack {
+            transition: transform 0.75s ease;
+        }
+
+        .list-item:hover::before {
+            content: "🪄";
+        }
+
+        .list-item:hover {
+            transform: skewX(-10deg);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateY(0);
+                margin-top: 0%;
+            }
+
+            50% {
+                transform: translateY(-100%);
+                margin-top: 100%;
+            }
+
+            100% {
+                transform: translateY(0%);
+                margin-top: 0%;
+            }
+        }
+    </style>
 </head>
 
-<body>
-    <header class="bg-white shadow-md px-4 py-6">
-        <h1 class="text-xl text-black">
-            Mushfiqur Rahman
-        </h1>
-    </header>
-    <div class="container px-4 py-4">
-        <h3 class="text-lg text-white">Here are some of my Randoms to Check out!</h3>
-        <ul class="list-inside list-disc">
-            <li class="list-item"><a class="text-cyan-400 hover:text-cyan-600" href="./TaskGenerator">Task Generator</a>
+<body class="lg:px-80">
+    <div class="px-7 md:px-20 lg:scale-125 py-14 md:py-32">
+        <div class="flex justify-between">
+            <h1 id="name" class="hover:text-white hover:bg-black text-5xl md:text-8xl text-left">
+                ./mushfiqr
+            </h1>
+            <div id="tech_stack" class="text-xs md:text-lg overflow-clip h-10 md:h-24 self-center">
+                <ul class="text-right">
+                    <li class="text-gray-500">Vue.js</li>
+                    <li class="text-gray-500">Typescript</li>
+                    <li class="text-gray-500">Express</li>
+                    <li class="text-gray-500">Python</li>
+                    <li class="text-gray-500">Lua</li>
+                    <li class="text-gray-500">p5.js</li>
+                    <li class="text-gray-500">MongoDB</li>
+                    <li class="text-gray-500">matter.js</li>
+                    <li class="text-gray-500">JavaScript</li>
+                    <li class="text-gray-500">Flutter</li>
+                    <li class="text-gray-500">Svelte</li>
+                    <li class="text-gray-500">REST</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 p-12">
+        </div>
+        <ul id="projects" class="text-xl md:text-2xl mx-6 md:mx-12">
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900" href="./TaskGenerator">
+                    task_generator</a>
             </li>
-            <li class="list-item"><a class="text-cyan-400 hover:text-cyan-600" href="./RandomQuote">Random Quote</a>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900" href="./RandomQuote">
+                    random_quote</a>
             </li>
-            <li class="list-item"><a class="text-cyan-400 hover:text-cyan-600" href="./PImage">Pi Image</a></li>
-            <li class="list-item"><a class="text-cyan-400 hover:text-cyan-600" href="./FilterWatch">Filter Watch</a>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900" href="./PImage"> pi_image</a>
             </li>
-            <li class="list-item"><a class="text-cyan-400 hover:text-cyan-600" href="./Hotmqtt">Hot MQTT</a></li>
-            <li class="list-item"><a class="text-cyan-400 hover:text-cyan-600" href="./Physics/BoxesDropping/">Physics -
-                    Drop Boxes</a></li>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900" href="./FilterWatch">
+                    filterwatch</a>
+            </li>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900" href="./Hotmqtt">
+                    hot_mqtt</a>
+            </li>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900"
+                    href="./Physics/BoxesDropping/">drop_boxes</a></li>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900"
+                    href="./Physics/Plinko/">bell_curve</a></li>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900"
+                    href="./CurvePlotting/">function_plotting</a></li>
+            <li class="list-item max-w-fit"><a class="text-gray-500 hover:text-gray-900"
+                    href="./DigitalEducation/">digital_education</a></li>
+
         </ul>
     </div>
+
+    <script>
+    </script>
 </body>
 
 </html>
