@@ -23,6 +23,92 @@
     transform: skewX(-10deg);
 }
 
+.ascii-art, .ascii-layer {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: max-content;
+    font-family: monospace;
+    white-space: pre;
+    font-size: 2px;
+    letter-spacing: 1px;
+    line-height: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ascii-art {
+    /* perspective */
+    scale: .8;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: perspective(2400px);
+
+    /* fading edges gradient */
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, 1) 100%);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.ascii-layer {
+    top: 0;
+    left: 0;
+    z-index: -1;
+    grid-row-start: 1;
+    grid-column-start: 1;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Define variable for translate multiplier */
+:root {
+    --translate-multiplier: 3;
+}
+
+
+.ascii-layer[data-layer="0"] {
+    transform: translateZ(calc(0px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="1"] {
+    transform: translateZ(calc(-1px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="2"] {
+    transform: translateZ(calc(-2px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="3"] {
+    transform: translateZ(calc(-3px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="4"] {
+    transform: translateZ(calc(-4px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="5"] {
+    transform: translateZ(calc(-5px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="6"] {
+    transform: translateZ(calc(-6px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="7"] {
+    transform: translateZ(calc(-7px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="8"] {
+    transform: translateZ(calc(-8px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="9"] {
+    transform: translateZ(calc(-9px * var(--translate-multiplier)));
+}
+
+.ascii-layer[data-layer="10"] {
+    transform: translateZ(calc(-10px * var(--translate-multiplier)));
+}
+
 @keyframes scroll {
     0% {
         transform: translateY(0);
