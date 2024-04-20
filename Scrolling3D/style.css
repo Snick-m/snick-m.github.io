@@ -1,0 +1,106 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    background-color: white;
+}
+
+#stars {
+    position: fixed;
+}
+
+#stars span[data-id="1"] {
+    position: relative;
+    left: 0;
+    top: 5px;
+    transform-origin: center;
+    scale: 0.9;
+    animation: star 7s linear infinite;
+    animation-direction: reverse;
+}
+
+#stars span[data-id="2"] {
+    position: relative;
+    left: 0;
+    top: -10px;
+    transform-origin: center;
+    scale: 1.25;
+    animation: star 3s linear infinite;
+}
+
+#stars span[data-id="3"] {
+    position: relative;
+    left: 0;
+    top: 15px;
+    scale: 1.025;
+    transform-origin: center;
+    animation: star 5s linear infinite;
+}
+
+#wrapper {
+    width: 100%;
+    height: 200vh;
+}
+
+#wrapper #hole {
+    box-shadow:inset 0 0 10px 2px rgba(0, 0, 0, .75);
+}
+
+#wrapper #card {
+    transform-origin: center;
+    translate: -50% -50%;
+    animation: flip linear;
+    animation-timeline: scroll();
+}
+
+#card span {
+    animation: zoom linear;
+    animation-timeline: scroll();
+}
+
+@keyframes zoom {
+    80% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.2;
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: perspective(400px) rotateY(-180deg);
+        box-shadow: 0 0 0px rgba(0, 0, 0, 0.2);
+        -webkit-text-fill-color: transparent;
+    }
+
+    25% {
+        transform: perspective(400px) rotateY(-180deg);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+        -webkit-text-fill-color: transparent;
+    }
+
+    75% {
+        transform: perspective(400px) rotateY(0deg);
+        box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+        -webkit-text-fill-color: black;
+    }
+
+    100% {
+        transform: perspective(400px) rotateY(0deg);
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+        -webkit-text-fill-color: black;
+    }
+}
+
+@keyframes star {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
