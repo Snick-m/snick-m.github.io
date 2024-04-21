@@ -1,0 +1,9 @@
+{
+  "name": "ascii_imager",
+  "version": "1.0.0",
+  "description": "Converts images to ASCII art",
+  "type": "module",
+  "dependencies": {
+    "jimp": "^0.22.12"
+  }
+}
