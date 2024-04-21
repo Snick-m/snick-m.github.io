@@ -59,6 +59,18 @@ html {
     animation-timeline: scroll();
 }
 
+#scroll-demo {
+    opacity: 1;
+    animation: fade-out linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0% 20%;
+}
+
+#scroll-demo #scroll-bar {
+    animation: 1.75s ease-in-out 1s infinite scroll-demo;
+    opacity: 0;
+}
+
 @keyframes zoom {
     80% {
         scale: 1;
@@ -92,6 +104,38 @@ html {
         transform: perspective(400px) rotateY(0deg);
         box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
         -webkit-text-fill-color: black;
+    }
+}
+
+@keyframes scroll-demo {
+    0% {
+        opacity: 0;
+        top: 0;
+    }
+
+    20% {
+        opacity: 1;
+        top: 0;
+    }
+
+    70% {
+        opacity: 1;
+        top: 40%;
+    }
+
+    90% {
+        opacity: 0;
+        top: 40%;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
