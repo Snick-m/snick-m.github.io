@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Play</title>
+
+    <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@300;400;700&display=swap');
+    </style>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="w-full grid justify-center place-content-center scroll-">
+    <video id="video" class="object-cover portrait:h-full landscape:w-full fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" preload="auto" autobuffer>
+        <source src="./sea_uhd.mp4" media="(min-width:1536px)" type="video/mp4">
+        <source src="./sea_fhd.mp4" media="(min-width:1280px)" type="video/mp4">
+        <source src="./sea_hd.mp4" media="(min-width:768px)" type="video/mp4">
+        <source src="./sea_sd.mp4" type="video/mp4">
+    </video>
+
+    <a target="_blank" href="https://www.pexels.com/video/top-view-of-beach-waves-crashing-on-seashore-4183071/"><cite
+            class="flex flex-row opacity-20 hover:opacity-100 fixed bottom-4 right-8 not-italic font-mono text-center text-sm text-white-800 rounded-full border-2 border-neutral-600 overflow-clip">
+            <span class="px-2">Video by </span>
+            <span class="px-2 text-white font-bold bg-neutral-600 h-full">Ruvim Miksanskiy</span>
+        </cite>
+    </a>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
