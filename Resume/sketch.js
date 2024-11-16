@@ -63,7 +63,6 @@ function draw() {
   } else if (permissionGranted) {
     let rx = rotationX - PI / 6;
     let ry = rotationY;
-    console.log(pointerX, pointerY);
     updatePointer(pointerX + ry * 10, pointerY + rx * 40);
   }
   background(255);
@@ -77,8 +76,6 @@ function draw() {
     }
   }
   endShape();
-
-
 }
 
 function drawQuad(x, y) {
@@ -96,7 +93,7 @@ function drawQuad(x, y) {
 }
 
 function getDistance(x1, y1, x2, y2) {
-  return min(Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2) * 0.35, 70);
+  return min(Math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2) * 0.35, 140);
 }
 
 function updatePointer(x, y) {
